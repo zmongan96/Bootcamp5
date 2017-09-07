@@ -1,0 +1,14 @@
+  <div class="row" ng-controller="ListingsController" ng-init="createMap()">
+	<div class="col-md-offset-1 col-md-10">
+	   <div ng-show="error" class="text-danger">
+	      <strong ng-bind="error"></strong>
+	   </div>
+		   <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true">
+			    <ui-gmap-markers models="mapMarkers" coords="'coordinates'" idkey="'_id'">
+		            <ui-gmap-windows show="show">
+		                <div ng-non-bindable>Building Name: {{name}} <br> Code: {{code}} <br> Address: {{address}}</div>
+		            </ui-gmap-windows>
+			    </ui-gmap-markers>
+			</ui-gmap-google-map>
+	</div>
+</div>
