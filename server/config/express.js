@@ -9,7 +9,7 @@ var path = require('path'),
 
 module.exports.init = function() {
   //connect to database
-  mongoose.connect(process.env.MONGOLAB_URI);
+  mongoose.connect(config.db.uri);
 
   //initialize app
   var app = express();
